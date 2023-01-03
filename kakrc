@@ -12,3 +12,6 @@ map global normal '$' ': comment-block<ret>' -docstring 'comment block'
 
 map global user 'r' ': surround<ret>' -docstring 'surround'
 map global user 'R' ': change-surround<ret>' -docstring 'change surround'
+
+hook global BufCreate .*\.(sbt) %{ set buffer filetype scala }
+
